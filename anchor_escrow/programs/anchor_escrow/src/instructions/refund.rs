@@ -72,6 +72,7 @@ impl<'info> Refund<'info> {
 
         transfer_checked(cpi_ctx, transfer_amount, decimals)?;
 
+        // Close Accounts
         let close_accounts = CloseAccount {
             account: self.escrow_vault.to_account_info(),
             destination: self.maker.to_account_info(),
