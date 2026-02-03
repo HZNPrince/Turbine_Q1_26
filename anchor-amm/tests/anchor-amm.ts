@@ -151,7 +151,7 @@ describe("anchor-amm", () => {
 
   it("Withdraw complete !", async () => {
     const tx = await program.methods
-      .withdraw(new anchor.BN(5000), new anchor.BN(9166), new anchor.BN(37983))
+      .withdraw(new anchor.BN(5000), new anchor.BN(9166), new anchor.BN(37981))
       .accounts({
         withdrawer: payer.publicKey,
         mintX: mint_x,
